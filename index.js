@@ -3,11 +3,11 @@ const app = express();
 const port = 5000;
 // const multer = require("multer");
 // const jwt = require("jsonwebtoken");
-const {create, deleteUser, getOneUser, update, getAllUsers} = require('./crud')
+const {create, deleteUser, getOneUser, update, getAlldata} = require('./crud')
 
 app.use(express.json());
 
-app.get('/', getAllUsers)
+app.get('/', getAlldata)
 app.post('/create', create)
 app.get('/get/:id', getOneUser)
 app.put('/update/:id', update)
